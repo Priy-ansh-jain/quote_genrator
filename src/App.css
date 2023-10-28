@@ -1,38 +1,181 @@
-.App {
+#root,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  box-sizing: border-box;
+}
+.app {
+  background-image: url("./images/img.jpg");
+  background-image: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
+  background-repeat: repeat;
+  background: linear-gradient(rgb(86, 15, 15));
+}
+.card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #f5f6f9;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: #ffd401 10px 10px;
+  overflow: hidden;
+  border: none;
+  height: 100px;
+  cursor: pointer;
+}
+.heading {
+  display: flex;
+  font-size: larger;
+  font-weight: 800;
+  font-family: "Times New Roman", Times, serif;
+  align-items: center;
+  height: 580px;
+  width: fit-content;
+  padding: 10px;
+}
+button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #183153;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: none;
+  height: 400px;
+  cursor: pointer;
+  width: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+button:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #ffd401;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+button span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+  box-shadow: #ffd401 10px 10px;
+
+}
+
+button:hover span {
+  color: #183153;
+  animation: scaleUp 0.3s ease-in-out;
+  padding: 10px 20px;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
   }
-  to {
-    transform: rotate(360deg);
+
+  50% {
+    transform: scale(0.95);
   }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  25% {
+    transform: translate3d(4px, 0, 0);
+  }
+  50% {
+    transform: translate3d(-3px, 0, 0);
+  }
+  75% {
+    transform: translate3d(2px, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 90%;
+    height: 30%;
+  }
+  .button {
+    position: flex-end;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    border-radius: 5px;
+    background: #183153;
+    font-family: "Montserrat", sans-serif;
+    /* box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2); */
+    overflow: hidden;
+    border: none;
+    /* height: 400px; */
+    cursor: pointer;
+    width: 100px;
+  }
+}
+#ball,
+#ball2,
+#ball3,
+#ball4 {
+  width: 100px;
+  height: 36px;
+  background-color: #e2e5e7;
+  position: absolute;
+}
+
+#ball {
+  width: 100px;
+  height: 30px;
+  top: 0;
+  left: 0;
+}
+
+#ball2 {
+  top: 0;
+  right: 0;
+}
+
+#ball3 {
+  bottom: 0;
+  left: 0;
+}
+
+#ball4 {
+  bottom: 0;
+  right: 0;
 }
