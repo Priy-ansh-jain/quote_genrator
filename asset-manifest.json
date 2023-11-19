@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/quote_genrator.git/static/css/main.a1920d07.css",
+    "main.js": "/quote_genrator.git/static/js/main.ebbfed02.js",
+    "static/media/img.jpg": "/quote_genrator.git/static/media/img.8fcd9e4a19b42f050316.jpg",
+    "index.html": "/quote_genrator.git/index.html",
+    "main.a1920d07.css.map": "/quote_genrator.git/static/css/main.a1920d07.css.map",
+    "main.ebbfed02.js.map": "/quote_genrator.git/static/js/main.ebbfed02.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a1920d07.css",
+    "static/js/main.ebbfed02.js"
+  ]
+}
